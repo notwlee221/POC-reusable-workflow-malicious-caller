@@ -6,10 +6,8 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: wlee221/reusable-workflow-poc/.github/workflows/reusable-workflow.yml@main
-    with:
-      username: wlee221
+    uses: wlee221/reusable-workflow-poc/.github/workflows/reusable-workflow-npm.yml@main
     secrets:
-      EXAMPLE_SECRET: ${{ secrets.EXAMPLE_SECRET }}
-      # attempt to call EXAMPLE_SECRET without actually having access to that secret.
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # attempt to use a remote reusable workflow without knowing actual NPM_TOKEN value 
       
